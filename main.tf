@@ -22,3 +22,8 @@ resource "google_compute_instance" "dareit-vm-ci" {
     }
   }
 }
+resource "google_storage_bucket" "static" {
+ project       = "august-tract-382514"
+ name          = "ml_terraform_file"
+ location      = "US"
+}
