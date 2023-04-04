@@ -1,3 +1,9 @@
+resource "google_storage_bucket" "static" {
+  project      = "august-tract-382514"
+  name         = "ml_terraform_file"
+  location     = "US"
+}
+
 resource "google_compute_instance" "dareit-vm-ci" {
   name         = "dareit-vm-tf-ci"
   machine_type = "e2-medium"
@@ -21,9 +27,4 @@ resource "google_compute_instance" "dareit-vm-ci" {
       // Ephemeral public IP
     }
   }
-}
-resource "google_storage_bucket" "static" {
- project       = "august-tract-382514"
- name          = "ml_terraform_file"
- location      = "US"
 }
